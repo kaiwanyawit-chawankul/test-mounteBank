@@ -5,10 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.test
+      no_cache: true  # add this line to disable cache
     volumes:
       - .:/app
-      - /app/obj
-      - /app/bin
     working_dir: /app
     command: ["dotnet", "test","--no-build"]
     # depends_on:

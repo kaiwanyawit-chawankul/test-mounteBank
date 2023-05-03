@@ -7,8 +7,10 @@
     dotnet sln add test/DemoMounteBank.Test
     dotnet test
 ```
+## Testing service locally
+```
+docker-compose up --build
+```
 
-
-## Testing service
 ## Getting mock request from mounteBank
 ## Testing service with mounteBank

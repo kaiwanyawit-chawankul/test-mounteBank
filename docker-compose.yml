@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - .:/app
+      - /app/obj
+      - /app/bin
+    working_dir: /app
+    command: ["dotnet", "test","--no-build"]
+    # depends_on:
+    #   - app

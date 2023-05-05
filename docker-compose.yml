@@ -9,7 +9,7 @@ services:
     volumes:
       - ./mountebank/imposters:/imposters
       - ./proxy-to-realserver.json:/imposters/proxy-to-realserver.json
-    command: ["mb", "--configfile", "/imposters/proxy-to-realserver.json"]
+    command: ["start", "--configfile", "/imposters/proxy-to-realserver.json"]
   test:
     build:
       context: .
@@ -19,8 +19,8 @@ services:
     working_dir: /app
     command: ["dotnet", "test", "--logger", "console;verbosity=normal" ]
     environment:
-      - MY_SERVICE_URL=https://628706e47864d2883e7d2b04.mockapi.io
-    # depends_on:
-    #   - mountebank
+      - MY_SERVICE_URL=http://mountebank:8080
+    depends_on:
+      - mountebank
     # depends_on:
     #   - app

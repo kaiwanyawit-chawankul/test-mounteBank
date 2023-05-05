@@ -53,5 +53,5 @@ Don't forget the argument `--exit-code-from test` to make the test stop when run
 ```
 docker exec -it <container name> <command>
 
-docker exec -it mountebank mb save --port 8080 --savefile /imposters/imposters.json --removeProxies
+docker exec -it test-mountebank-mountebank-1 mb save --port 2525 --savefile /imposters/imposters.json --removeProxies
 ```

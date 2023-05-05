@@ -1,0 +1,58 @@
+{
+  "imposters": [
+    {
+      "protocol": "http",
+      "port": 8080,
+      "recordRequests": false,
+      "stubs": [
+        {
+          "predicates": [
+            {
+              "deepEquals": {
+                "method": "GET"
+              }
+            },
+            {
+              "deepEquals": {
+                "path": "/api/v1/users/1"
+              }
+            },
+            {
+              "deepEquals": {
+                "query": {}
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Server": "Cowboy",
+                  "Connection": "close",
+                  "X-Powered-By": "Express",
+                  "Access-Control-Allow-Origin": "*",
+                  "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,OPTIONS",
+                  "Access-Control-Allow-Headers": "X-Requested-With,Content-Type,Cache-Control,access_token",
+                  "Content-Type": "application/json",
+                  "Content-Length": "179",
+                  "Etag": "\"384135006\"",
+                  "Vary": "Accept-Encoding",
+                  "Date": "Fri, 05 May 2023 03:25:16 GMT",
+                  "Via": "1.1 vegur"
+                },
+                "body": {
+                  "createdAt": "2022-05-19T14:48:52.086Z",
+                  "name": "Dwight Sawayn",
+                  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1122.jpg",
+                  "id": "1"
+                },
+                "_mode": "text"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

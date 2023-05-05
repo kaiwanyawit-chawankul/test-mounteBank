@@ -1,0 +1,25 @@
+{
+    "port": 8080,
+    "protocol": "http",
+    "stubs": [
+      {
+        "responses": [
+          {
+            "proxy": {
+              "to": "https://628706e47864d2883e7d2b04.mockapi.io",
+              "mode": "proxyAlways",
+              "predicateGenerators": [
+                {
+                  "matches": {
+                    "method": true,
+                    "path": true,
+                    "query": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }

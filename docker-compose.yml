@@ -1,6 +1,15 @@
 version: '3.9'
 
 services:
+  mountebank:
+    image: docker.io/bbyars/mountebank:latest
+    ports:
+      - "2525:2525"
+      - "8080:8080"
+    volumes:
+      - ./mountebank/imposters:/imposters
+      - ./proxy-to-realserver.json:/imposters/proxy-to-realserver.json
+    command: ["mb", "--configfile", "/imposters/proxy-to-realserver.json"]
   test:
     build:
       context: .

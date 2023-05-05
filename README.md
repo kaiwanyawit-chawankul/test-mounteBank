@@ -55,3 +55,7 @@ docker exec -it <container name> <command>
 
 docker exec -it test-mountebank-mountebank-1 mb save --port 2525 --savefile /imposters/imposters.json --removeProxies
 ```
+
+```
+    command: ["start", "--configfile", "/imposters/response.json"]
+```

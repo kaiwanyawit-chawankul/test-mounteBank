@@ -8,8 +8,8 @@ services:
       - "8080:8080"
     volumes:
       - ./mountebank/imposters:/imposters
-      # - ./proxy-to-realserver.json:/imposters/proxy-to-realserver.json
-    command: ["start", "--configfile", "/imposters/proxy-to-realserver.json"]
+    # command: ["start", "--configfile", "/imposters/proxy-to-realserver.json"]
+    command: ["start", "--configfile", "/imposters/response.json"]
   test:
     build:
       context: .

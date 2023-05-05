@@ -13,10 +13,12 @@ public class UnitTest1
     [Fact]
     public async Task Test1Async()
     {
+        string myServiceUrl = Environment.GetEnvironmentVariable("MY_SERVICE_URL");
+
         var client = new HttpClient();
 
         // Set the base address of the mountebank server
-        client.BaseAddress = new Uri("https://628706e47864d2883e7d2b04.mockapi.io");
+        client.BaseAddress = new Uri(myServiceUrl);
 
         // Make a GET request to a mock endpoint
         HttpResponseMessage response = await client.GetAsync("/api/v1/users/1");

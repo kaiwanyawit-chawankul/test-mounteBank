@@ -9,5 +9,9 @@ services:
       - .:/app
     working_dir: /app
     command: ["dotnet", "test", "--logger", "console;verbosity=normal" ]
+    environment:
+      - MY_SERVICE_URL=https://628706e47864d2883e7d2b04.mockapi.io
+    # depends_on:
+    #   - mountebank
     # depends_on:
     #   - app

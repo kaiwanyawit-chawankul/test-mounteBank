@@ -1,3 +1,5 @@
+[![Test with Docker Compose](https://github.com/kaiwanyawit-chawankul/test-mounteBank/actions/workflows/test.yml/badge.svg)](https://github.com/kaiwanyawit-chawankul/test-mounteBank/actions/workflows/test.yml)
+
 # How this repo works
 ## C# project to call to the external service
 
